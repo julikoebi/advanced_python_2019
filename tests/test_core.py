@@ -34,3 +34,7 @@ def test_find_peaks_max_edge():
 def test_find_peaks_empty_list():
     peaks = playground.core.find_peaks([])
     assert peaks == []  
+    
+def test_find_lowest_tupel():
+    lows = playground.core.find_lows([(20, 0, 0), (0, 0, 5), (10, 0, 11), (0, 19, 0), (22, 3, 0)])
+    assert lows == [(0, 0, 5), (0, 19, 0)]  
